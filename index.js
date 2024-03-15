@@ -1,4 +1,5 @@
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
+const client = new Discord.Client({intents: ['Guilds' , 'GuildMessages' , 'MessageContent']});
 require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
