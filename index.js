@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 
-const statusMessages = ["👑 I'm Kanji Thụy","❤️ WELCOME TO 2024","UNIFIED POLICE DEPARMENT 🏢","Đang xây dựng đồn LSPD 🚓","❤️ Love Coconut ❤️","❤️ 24012024 ❤️","Nhận setup Bot & Discord theo yêu cầu 🛠️","📞 Contact Discord: thuyalwayssmiles93"];
+const statusMessages = ["❤️ WELCOME TO 2024","UNIFIED POLICE DEPARTMENT 🏢","LOS SANTOS POLICE DEPARTMENT 🚓","Nhận setup Bot & Discord theo yêu cầu 🛠️","📞 Contact Discord: thuyalwayssmiles93"];
 
 
 let currentIndex = 0;
@@ -42,11 +42,11 @@ function updateStatusAndSendMessages() {
     status: 'dnd',
   });
 
-  
+
   const textChannel = client.channels.cache.get(channelId);
 
   if (textChannel instanceof TextChannel) {
-   
+
     textChannel.send(`Bot status is: ${currentStatus}`);
   } else {
 
@@ -67,4 +67,3 @@ client.once('ready', () => {
 });
 
 login();
-
